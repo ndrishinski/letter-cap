@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+ .dingo {
+  color: black;
+  margin-top: 10%;
+  font-family: 'Courgette', cursive;
+}
+
+.dingo-baby {
+  text-align: left;
+  text-shadow: 1px 1px 1px gray;
+}
+
+.jumbotron {
+  box-shadow: 4px 4px 4px gray;
+  margin-top: 15%;
+}
+
+.fa-dyalog {
+  height: 25px;
+}
+
