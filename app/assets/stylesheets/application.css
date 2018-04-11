@@ -27,10 +27,18 @@
 
 .jumbotron {
   box-shadow: 4px 4px 4px gray;
-  margin-top: 15%;
+  margin-top: 10%;
 }
 
 .fa-dyalog {
   height: 25px;
+}
+
+.navbar {
+  background-color: transparent;
+}
+
+.nav {
+  text-decoration: none;
 }
 

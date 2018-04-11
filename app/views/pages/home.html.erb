@@ -1,18 +1,40 @@
-
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
 <div class="container">
-  <div class="dingo text-center">
+  <div class="dingo text-center" style="display: none">
     <h4 class="dingo-baby">
      The bitterest tears shed over graves are for words left unsaid and for deeds left undone. ~Harriet Beecher Stowe, Little Foxes, 1865
    </h4>
   </div>
 
-  <div class="jumbotron">
+  <p class="lead" id="lead" style="display:none">
+      <a class="btn btn-primary btn-lg" role="button">Learn more</a>
+  </p>
+
+  <div class="jumbotron" style="display:none">
     <h1 class="display-4">Welcome to Memories!</h1>
     <p class="lead">Leave your loved ones a note, even after your gone.</p>
     <hr class="my-4">
     <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </p>
   </div>
+  
 </div>
+
+<script>
+$(function() {
+
+  $(".dingo").fadeIn(2000, function() {
+    $("#lead").fadeIn(3000).removeClass("display:none");
+
+  });
+});
+
+$(function() {
+
+    $("#lead").on("click", function() {
+      $(".jumbotron").toggle(1000);
+    });
+});
+
+</script>

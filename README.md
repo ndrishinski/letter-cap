@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+  To add users to letters:
 
-Things you may want to cover:
+1. run migration
+  rails g migration AddUserToLetter user:references
 
-* Ruby version
+2. has many in user.rb
+  has_many :letters
 
-* System dependencies
+3. belongs to in letter.rb
+  belongs_to :user
 
-* Configuration
+4. User must exist error:
+  In letters controller create method add this:
+  @letter.user_id = current_user.id
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  Letters now have a user associated with them!

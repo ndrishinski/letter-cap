@@ -1,6 +1,7 @@
 class LettersController < ApplicationController
   before_action :authenticate_user!
   before_action :set_letter, only: [:show, :edit, :update, :destroy]
+  before_action :post_owner, only: [:edit, :update, :destroy, :toggle_status]
 
   # GET /letters
   # GET /letters.json
@@ -26,6 +27,7 @@ class LettersController < ApplicationController
   # POST /letters.json
   def create
     @letter = Letter.new(letter_params)
+    @letter.user_id = current_user.id
 
     respond_to do |format|
       if @letter.save
@@ -68,8 +70,15 @@ class LettersController < ApplicationController
       @letter = Letter.find(params[:id])
     end
 
+    def post_owner
+      unless @letter.user_id == current_user.id || current_user.roles.include?(:admin)
+        flash[:notice] = 'Access denied as you are not owner of this Post'
+        redirect_to letters_path
+      end
+    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def letter_params
       params.require(:letter).permit(:title, :body)
     end
+
 end
