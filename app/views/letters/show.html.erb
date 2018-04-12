@@ -1,15 +1,17 @@
 <p id="notice"><%= notice %></p>
+<div class="show_it table-dark">
 
-<p>
-  <strong>Title:</strong>
-  <%= @letter.title %>
-</p>
+  <p class="show_page">
+    <strong>Title:</strong>
+    <%= @letter.title %>
+  </p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @letter.body %>
-</p>
+  <p class="show_page">
+    <strong>Body:</strong>
+    <%= @letter.body %>
+  </p>
 
+</div>
 
 <%= link_to 'Edit', edit_letter_path(@letter) %> |
 <%= link_to 'Back', letters_path %>

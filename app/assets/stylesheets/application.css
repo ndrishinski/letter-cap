@@ -42,3 +42,38 @@
   text-decoration: none;
 }
 
+.letter_custom {
+  height: 200px;
+}
+
+body *:hover {
+  text-decoration: none;
+}
+
+.show_page {
+  text-decoration: italic;
+}
+
+.show_it {
+  height: 200px;
+  padding: 50px;
+}
+
+#lead {
+  color: white;
+}
+
+#harrychild {
+  
+}
+
+.btn-primary {
+  color: white;
+}
+
+textarea {
+  height: 500px;
+  max-height: 500px;
+  width: 600px;
+  overflow-y: scroll;
+}

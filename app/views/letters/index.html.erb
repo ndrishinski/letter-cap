@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Christian is a pussy ass bitch</h1>
+<div class="container">
+<h1>Browse or Start Your Letter <a class="magical" style="display:none;" href="/letters/new">here!</a></h1>
 
-<table>
+<table class="table table-dark">
   <thead>
     <tr>
       <th>Title</th>
@@ -14,12 +15,12 @@
   <tbody>
     <% @letters.each do |letter| %>
       <tr>
-        <td><%= letter.title %></td>
-        <td><%= letter.body %></td>
-        <td><%= link_to 'Show', letter %></td>
+        <td class="letter_custom"><%= letter.title %></td>
+        <td class="letter_custom"><%= letter.body %></td>
+        <td><%= link_to 'Open', letter %></td>
         <% if owner?(letter) %>
           <td><%= link_to 'Edit', edit_letter_path(letter)%></td>
-          <td><%= link_to 'Destroy', letter, method: :delete, data: { confirm: 'Are you sure?' }%></td>
+          <td><%= link_to 'Delete', letter, method: :delete, data: { confirm: 'Are you sure?' }%></td>
         <% end %>
       </tr>
     <% end %>
@@ -27,5 +28,16 @@
 </table>
 
 <br>
+<div id="lead2">
+<button class="btn btn-primary" id="harrychild"><%= link_to 'New Letter', new_letter_path %></button>
+</div>
+</div>
+<script>
+  $(function() {
 
-<%= link_to 'New Letter', new_letter_path %>
+    $(".magical").fadeIn(2000, function() {
+      $(".magical").removeClass("display:none");
+    });
+  });
+
+</script>
