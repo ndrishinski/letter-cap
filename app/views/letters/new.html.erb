@@ -1,5 +1,15 @@
-<h1>New Letter</h1>
+<div class="container">
+<h1 class="text-primary">New Letter</h1>
+<div class="row">
+  <div class="col-md-6">
+  <%= render 'form', letter: @letter %>
+  </div>
 
-<%= render 'form', letter: @letter %>
+  <div class="col-md-6">
+    <img class="gayyer" src="https://studybreaks.com/wp-content/uploads/2017/11/write.jpg">
+  </div>
 
-<%= link_to 'Back', letters_path %>
+  <%= link_to 'Back', letters_path %>
+
+  </div>
+</div>

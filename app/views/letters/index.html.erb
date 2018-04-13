@@ -1,20 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container">
-<h1>Browse or Start Your Letter <a class="magical" style="display:none;" href="/letters/new">here!</a></h1>
+<div class="container" id="burrito">
+  <h1 class="toppi"><a class="odell text-primary">Browse</a> or Start Your Letter <a class="magical text-primary" style="display:none;" href="/letters/new">here!</a></h1><hr>
 
-<table class="table table-dark">
+ 
+<table class="table table-dark" style="display: none;">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Body</th>
+      <th class="text-primary">Title</th>
+      <th class="text-primary">Body</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @letters.each do |letter| %>
-      <tr>
+      <tr class="spaceyg">
         <td class="letter_custom"><%= letter.title %></td>
         <td class="letter_custom"><%= letter.body %></td>
         <td><%= link_to 'Open', letter %></td>
@@ -28,8 +29,8 @@
 </table>
 
 <br>
-<div id="lead2">
-<button class="btn btn-primary" id="harrychild"><%= link_to 'New Letter', new_letter_path %></button>
+<div id="lead2" style="display: none;">
+<a class="btn btn-primary btn-lg butto" id="harrychild" href="/letters/new">New Letter</a>
 </div>
 </div>
 <script>
@@ -40,4 +41,17 @@
     });
   });
 
+$(function() {
+
+    $(".odell").on("click", function() {
+      $(".table").toggle(1000);
+    });
+});
+
+$(function() {
+
+    $(".odell").on("click", function() {
+      $("#lead2").toggle(1000);
+    });
+});
 </script>

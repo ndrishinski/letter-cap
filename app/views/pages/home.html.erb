@@ -1,29 +1,81 @@
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
-<body>
+
+<body class="backy">
 
 <div class="container">
+  <div class="row">
+    <div class="col-md-6">
   <div class="dingo text-center" style="display: none">
-    <h4 class="dingo-baby">
+    <h2 class="dingo-baby">
      The bitterest tears shed over graves are for words left unsaid and for deeds left undone. ~Harriet Beecher Stowe
    </h4>
   </div>
 
   <p class="lead" id="lead" style="display:none">
-      <a class="btn btn-primary btn-lg" role="button">What is Memories?</a>
+      <a class="btn btn-primary btn-lg butto" role="button">What is Memories?</a>
   </p>
 
-  <div class="jumbotron" style="display:none">
+</div>
+
+<div class="col-md-6">
+
+  <div class="jumbotron" id="jumby" style="display:none">
     <h1 class="display-4">Welcome to Memories!</h1>
     <p class="lead">Leave your loved ones a note, even after your gone.</p>
     <hr class="my-4">
     <p>Memories is a place where you can express your love and feelings for those you leave behind. It is essentially a lasting piece of comfort that will always be available for loved ones.</p>
+
+    <br>
+    <button class="revealer btn btn-primary">Our Mission <i class="fas fa-angle-double-down"></i></button>
   </div>
 
+
+</div>
+</div>
 </div>
 
+<div class="container" id="numero2" style="display: none;">
+  <div class="row"> 
+    <div class="col-md-6" id="babysize">
+      <img src="http://static.showit.co/1200/6bbdbYvTTxeKpmRryDFkAg/25111/myrtle_beach_family_photography_or_family_pictures_and_photos_or_pawleys_island_or_myrtle_beach_or_litchfield_family_photography-34.jpg">
+      <br> 
+      <br>
+    <button class="btn btn-primary anotha3">Founder <i class="fas fa-angle-double-down"></i></button>
+    </div>
+
+    <div class="col-md-6">
+      <div class="jumbotron nummy">
+        <h1 class="display-4">Our Mission</h1>
+        <p class="lead">The idea of Memories came with a single goal to bring families closer together. You never know which moment may be your last, which is why we created a platform for you to easily write, save and share your lasting thoughts, feelings and impressions with those you love. </p>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+</div>
+
+
+  <div class="container" id="numero3" style="display: none;">
+    <div class="row">
+      <div class="col-md-6 jumbotron nummy" id="jumby4">
+        <h1 class="display-4">Nick Drishinski</h1>
+        <p class="lead">Nick Drishinsk is a developer, entrepreneur and family-man living in Northern Utah.<hr>
+        <p class="text-center">Work with Me:</p><br>
+        <a href="https://www.linkedin.com/in/nickdrishinski/" style="color:white;"><i class="fab fa-linkedin" style="font-size: 22px;"></i></a><br>
+        <a href="#" style="color:white;">ndrishinski@yahoo.com</a><br>
+        <a href="#" style="color:white;">435-757-9991</a><br>
+      </div>
+      <div class="col-md-6">
+        <img class="nick" src="https://bluelovelife.files.wordpress.com/2017/08/screen-shot-2017-08-08-at-6-57-32-pm.png?w=780"
+      </div>
+
+    </div>
+  </div>
 </body>
+
 <script>
 $(function() {
 
@@ -36,7 +88,21 @@ $(function() {
 $(function() {
 
     $("#lead").on("click", function() {
-      $(".jumbotron").toggle(1000);
+      $("#jumby").toggle(1000);
+    });
+});
+
+$(function() {
+
+    $(".revealer").on("click", function() {
+      $("#numero2").toggle(1000);
+    });
+});
+
+$(function() {
+
+    $(".anotha3").on("click", function() {
+      $("#numero3").toggle(1000);
     });
 });
 

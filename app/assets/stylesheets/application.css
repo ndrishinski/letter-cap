@@ -17,7 +17,7 @@
  .dingo {
   color: black;
   margin-top: 10%;
-  font-family: 'Courgette', cursive;
+  font-family: 'sans-serif';
 }
 
 .dingo-baby {
@@ -28,6 +28,23 @@
 .jumbotron {
   box-shadow: 4px 4px 4px gray;
   margin-top: 10%;
+  color: #FFFFFF;
+  /*background-color: #494551;*/
+  
+}
+
+#moveitup {
+  margin-top: -5px;
+  margin-bottom: -30px;
+}
+
+#mumbo {
+  color: black;
+  width: 500px;
+}
+
+#jumby {
+  background-image: url("https://static1.squarespace.com/static/55679613e4b00149409af679/t/569d82e869492e9dd5318233/1453163242636/the-bucket-list-family.png");
 }
 
 .fa-dyalog {
@@ -35,8 +52,10 @@
 }
 
 .navbar {
-  background-color: transparent;
+  background-color: white;
+  color: black;
 }
+
 
 .nav {
   text-decoration: none;
@@ -61,10 +80,15 @@ body *:hover {
 
 #lead {
   color: white;
+  margin-top: 15px;
+}
+
+.butto {
+  box-shadow: 2px 2px 2px black;  
 }
 
 #harrychild {
-  
+  color: white;  
 }
 
 .btn-primary {
@@ -76,4 +100,63 @@ textarea {
   max-height: 500px;
   width: 600px;
   overflow-y: scroll;
+}
+
+#notice {
+  color: transparent;
+}
+
+.notice {
+  color: green;
+  margin-top: 50px;
+  margin-bottom: -20px;
+}
+
+.toppi {
+  margin-bottom: 15px;
+}
+
+.table-dark {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  border-radius: 10px;
+  border-top: none;
+  box-shadow: 4px 4px 4px black;
+}
+
+.table * {
+  color: white;
+}
+
+#numero2 {
+  margin-top: 100px;
+}
+
+.nummy {
+  background-color: #494551;
+}
+
+img {
+  height: 400px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px black;
+}
+
+.nick {
+  margin-left: -30px;
+  margin-top: 100px; 
+}
+
+.odell:hover {
+  cursor: pointer;
+}
+
+.gayyer {
+  margin-top: 100px;
+  margin-left: 80px;
+}
+
+.text-primary {
+  text-shadow: 2px 2px 2px black;
 }
